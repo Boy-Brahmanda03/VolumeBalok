@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/panjangEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:inputType="number"
+        android:hint="@string/panjang"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="8sp" />
+
+    <EditText
+        android:id="@+id/lebarEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:inputType="number"
+        android:hint="@string/lebar"
+        app:layout_constraintTop_toBottomOf="@+id/panjangEditText"
+        android:layout_margin="8sp" />
+
+    <EditText
+        android:id="@+id/tinggiEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:inputType="number"
+        android:hint="@string/tinggi"
+        app:layout_constraintTop_toBottomOf="@+id/lebarEditText"
+        android:layout_margin="8sp" />
+
+    <Button
+        android:id="@+id/btnHitung"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="156dp"
+        android:text="@string/hitung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tinggiEditText" />
+
+    <TextView
+        android:id="@+id/hasilTextView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        app:layout_constraintTop_toBottomOf="@id/btnHitung"
+        android:textSize="32dp"
+        android:gravity="center"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
